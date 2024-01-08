@@ -5,3 +5,6 @@ class Video(models.Model):
     Titulo = models.CharField(max_length = 500)
     Descricao = models.CharField(max_length = 500)
     link = models.CharField(max_length = 500)
+
+    def __str__(self):
+        return self.ID, self.Titulo, self.Descricao,self.link

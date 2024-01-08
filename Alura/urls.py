@@ -1,10 +1,9 @@
-from django.conf.urls import include, url
 from django.contrib import admin
-
+from django.urls import path, include, re_path
+from app_video import views
 urlpatterns = [
-    # Examples:
-    # url(r'^$', 'Alura.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-    url('', include(admin.site.urls)),
+    # Exemplos:
+    # path('', Alura.views.home, name='home'),
+    # path('blog/', include('blog.urls')),
+    path('videos', views.home, name='home'),
 ]
